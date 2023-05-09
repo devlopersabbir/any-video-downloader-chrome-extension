@@ -9,7 +9,6 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Progress,
   Select,
   Spinner,
   Text,
@@ -28,7 +27,6 @@ const App = () => {
   const [url, setUrl] = useState<string>("");
   const [videoId, setVideoId] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const [progress, setProgress] = useState<number>(0);
   const [videoTitle, setVideoTitle] = useState<string>("");
   const [videoThumb, setVideoThumb] = useState<string>("");
   const [quality, setQuality] = useState<string>("");
@@ -128,34 +126,30 @@ const App = () => {
       ) : videoTitle && videoThumb ? (
         <>
           <Downloader thumbnail={videoThumb} title={videoTitle} />
-          {progress < 0 ? (
-            <Progress my={3} h="5" hasStripe value={progress} />
-          ) : (
-            <>
-              <HStack spacing={2}>
-                <Select
-                  w="60%"
-                  onChange={(e) => setQuality(e.target.value)}
-                  placeholder="Select quality"
-                >
-                  <option value="highest">Highest</option>
-                  <option value="highestaudio">Highest Audio</option>
-                  <option value="highestvideo">Highest Video</option>
-                  <option value="lowest">Lowest</option>
-                  <option value="lowestaudio">Lowest Audio</option>
-                  <option value="lowestvideo">Lowest Video</option>
-                </Select>
-                <Button
-                  w="40%"
-                  onClick={handleDownload}
-                  colorScheme="messenger"
-                  rightIcon={<Icon as={FiDownload} />}
-                >
-                  {loading ? <Spinner /> : "Download"}
-                </Button>
-              </HStack>
-            </>
-          )}
+          <>
+            <HStack spacing={2}>
+              <Select
+                w="60%"
+                onChange={(e) => setQuality(e.target.value)}
+                placeholder="Select quality"
+              >
+                <option value="highest">Highest</option>
+                <option value="highestaudio">Highest Audio</option>
+                <option value="highestvideo">Highest Video</option>
+                <option value="lowest">Lowest</option>
+                <option value="lowestaudio">Lowest Audio</option>
+                <option value="lowestvideo">Lowest Video</option>
+              </Select>
+              <Button
+                w="40%"
+                onClick={handleDownload}
+                colorScheme="messenger"
+                rightIcon={<Icon as={FiDownload} />}
+              >
+                {loading ? <Spinner /> : "Download"}
+              </Button>
+            </HStack>
+          </>
         </>
       ) : null}
     </Container>
