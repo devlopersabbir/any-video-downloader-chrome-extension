@@ -155,8 +155,3 @@ const App = () => {
     </Container>
   );
 };
-
-export default App;
-function openURL() {
-  throw new Error("Function not implemented.");
-}
