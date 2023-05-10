@@ -28,6 +28,10 @@ git clone https://github.com/devlopersabbir/youtube-video-downloader-chrome-exte
 ```console
 cd api && npm i && cd ../app && npm i && npm run build
 ```
+- Alright, now we have to start our development server to do that just run this command.
+```console
+npm run dev
+```
 - I covered everything with this single command.
 <strong>Now it's ready to `unpacked`</strong>
 
