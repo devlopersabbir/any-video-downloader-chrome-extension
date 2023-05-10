@@ -26,15 +26,15 @@ git clone https://github.com/devlopersabbir/youtube-video-downloader-chrome-exte
 - <strong>YOU MUST HAVE NODE JS that's required since I was build my api with [nodeJs](https://nodejs.org/en)</strong>
 - Howerver no need to change anything in api folder.
 ## Last things Before Load unpacked
-- Just run this command in your `youtube-video-downloader-chrome-extension.git` directory.
+- Just run this command in your `youtube-video-downloader-chrome-extension` directory.
 ```console
 cd api && npm i && cd ../app && npm i && npm run build
 ```
+- I covered everything with this single command.
 - Alright, now we have to start our development server to do that just run this command.
 ```console
 npm run dev
 ```
-- I covered everything with this single command.
 <strong>Now it's ready to `unpacked`</strong>
 
 ## Youtube video tutorial
