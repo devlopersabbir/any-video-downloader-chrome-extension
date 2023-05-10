@@ -6,7 +6,8 @@ Introducing the [YouTube Video Downloader Chrome Extension](https://github.com/d
 
 |Before fetch data | After fetch data|
 | -------- | -------- |
-![devlopersabbir](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/e3690df7-b6d8-4246-a5e9-f19d68db565b) | ![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/61980ade-2ee5-4f12-afe2-e20e63dc4f0e)
+![devlopersabbir](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/d695110a-42e8-444a-8d15-4988afbea76f) | ![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/6c5aa51a-11a1-4b70-a586-708f0242d0c6)
+
 
 ## How to use it?
 
@@ -18,9 +19,10 @@ git clone https://github.com/devlopersabbir/youtube-video-downloader-chrome-exte
 ### Don't forget to do it before [Load unpacked](brave://extensions/)!
 - You have to must create a `YOUTUBE_API_KEY` from [Google Developer Console](https://console.cloud.google.com) <strong>It's required</strong>
 - After you get `API_KEY` then go to the `app` -> `src` -> open `App.tsx`; If you want you can see the screenshot.
-![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/bccc9385-00b7-4345-80d1-7db869c1d364)
+![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/50cad879-c8ae-40ca-97ec-7004290cd2bd)
+
 - And replace the `YOUTUBE_API_KEY`. Here is the screenshot.
-![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/5eeef451-07c3-4e2c-a58f-7d9669a89262)
+![image](https://github.com/devlopersabbir/youtube-video-downloader-chrome-extension/assets/82939905/2e274461-9243-4ea4-bf15-7fa603300bcf)
 - <strong>YOU MUST HAVE NODE JS that's required since I was build my api with [nodeJs](https://nodejs.org/en)</strong>
 - Howerver no need to change anything in api folder.
 ## Last things Before Load unpacked
