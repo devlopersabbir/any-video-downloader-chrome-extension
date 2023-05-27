@@ -1,11 +1,11 @@
 {
-  "name": "YouTube Video Downloader",
-  "description": "YouTube video downloader chrome extension",
+  "name": "Video Downloader",
+  "description": "Video downloader chrome extension",
   "version": "0.0.1",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
-    "default_title": "YouTube Video Downloader",
+    "default_title": "Video Downloader",
     "default_icon": {
       "16": "icon.png",
       "24": "icon.png",

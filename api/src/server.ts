@@ -19,7 +19,7 @@ app.post("/api/download", async (req: Request, res: Response) => {
   try {
     const videoInfo = await ytdl.getInfo(url);
     const videoFormat = ytdl.chooseFormat(videoInfo.formats, {
-      quality: quality || "highest",
+      quality: quality || "highestvideo",
       filter: "videoandaudio",
     });
     res.status(200).json({
