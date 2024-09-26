@@ -14,6 +14,25 @@ app.use(
   })
 );
 
+app.get("/", async (req, res) => {
+  res.status(200).json({
+    apifor: "Youtube video downloader api",
+    creator: "Sabbir Hossain Shuvo",
+    username: "devlopersabbir",
+    github: "https://github.com/devlopersabbir",
+    email: "devlopersabbir@gmail.com",
+    facebook: "https://facebook.com/devlopersabbir",
+    buymeacoffee: "https://buymeacoffee.com/devlopersabbir",
+  });
+});
+
+app.get("/api/download/paid/api/youtube/key/here/for/sabbir", (req, res) => {
+  const apiKey = process.env.YOUTUBE_API_KEY;
+
+  res
+    .status(200)
+    .json({ message: "api key here", api_key: apiKey ?? "not found!" });
+});
 app.post("/api/download", async (req: Request, res: Response) => {
   const { url, quality } = req.body;
   try {

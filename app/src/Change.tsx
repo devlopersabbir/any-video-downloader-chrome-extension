@@ -21,9 +21,9 @@ import {
   Text,
   Image,
 } from "@chakra-ui/react";
+import { getYoutTubeAPIKey } from "./libs";
 
 const Change = () => {
-  const YOUTUBE_API_KEY: string = "AIzaSyBA4OQ9i11REqdtOOMYiHkiA3UdQMB0AsE";
   const [url, setUrl] = useState<string>("");
   const [videoId, setVideoId] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
@@ -32,6 +32,7 @@ const Change = () => {
   const [quality, setQuality] = useState<string>("");
 
   const handleSubmit = async () => {
+    const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
     const videoUrl = url.trim();
     if (!videoUrl || videoUrl === "")
       return toast.error("Please input video url");
