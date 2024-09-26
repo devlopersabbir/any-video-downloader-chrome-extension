@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/api/download/paid", (req, res) => {
-  const apiKey = process.env._API_KEY;
+  const apiKey = process.env.YOUTUBE_API_KEY;
 
   res
     .status(200)
