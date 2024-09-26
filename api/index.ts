@@ -20,13 +20,13 @@ app.get("/", async (req, res) => {
   });
 });
 
-app.get("/api/download/paid/api/youtube/key/here/for/sabbir", (req, res) => {
-  const apiKey = process.env._API_KEY;
+// app.get("/api/download/paid/api/youtube/key/here/for/sabbir", (req, res) => {
+//   const apiKey = process.env._API_KEY;
 
-  res
-    .status(200)
-    .json({ message: "api key here", api_key: apiKey ?? "not found!" });
-});
+//   res
+//     .status(200)
+//     .json({ message: "api key here", api_key: apiKey ?? "not found!" });
+// });
 app.post("/api/download", async (req: Request, res: Response) => {
   const { url, quality } = req.body;
   try {
