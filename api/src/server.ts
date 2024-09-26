@@ -32,3 +32,4 @@ app.post("/api/download", async (req: Request, res: Response) => {
 });
 
 app.listen(5000, () => console.log("Server is runnign!"));
+export default app;
