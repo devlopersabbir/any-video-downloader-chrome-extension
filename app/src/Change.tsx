@@ -33,6 +33,7 @@ const Change = () => {
 
   const handleSubmit = async () => {
     const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
+    if (!YOUTUBE_API_KEY) console.info("youtube api not found");
     const videoUrl = url.trim();
     if (!videoUrl || videoUrl === "")
       return toast.error("Please input video url");

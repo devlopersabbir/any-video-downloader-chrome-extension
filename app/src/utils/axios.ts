@@ -1,6 +1,7 @@
 import axios from "axios";
 
-export const baseURL = "http://localhost:5000";
+export const baseURL =
+  "https://any-video-downloader-chrome-extension.vercel.app";
 export const ORIGIN_URL = "http://localhost:5173";
 export const YOUTUBE_API_KEY = "AIzaSyBA4OQ9i11REqdtOOMYiHkiA3UdQMB0AsE";
 export const youTubeBaseUrl = "https://www.googleapis.com/youtube/v3";
