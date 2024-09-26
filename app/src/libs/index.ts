@@ -7,7 +7,7 @@ interface ResponseType<T> {
 
 export const getYoutTubeAPIKey = async (): Promise<string> => {
   const response: ResponseType<GetAPIKeyResponseData> = await axios.get(
-    "https://any-video-downloader-chrome-extension.vercel.app/api/download/paid/api"
+    "https://any-video-downloader-chrome-extension.vercel.app/api/download/paid"
   );
 
   // Assuming the response data has an `api_key` property (check actual API response)
