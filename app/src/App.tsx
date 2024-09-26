@@ -22,6 +22,7 @@ const App = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async () => {
+    console.log("clicked");
     const videoUrl = url.trim();
     if (!videoUrl || videoUrl === "")
       return toast.error("Please input video url");

@@ -4,7 +4,7 @@ import { baseURL, youTubeBaseUrl } from "./utils/axios";
 import axios from "axios";
 import { FiDownload } from "react-icons/fi";
 import Loader from "./components/loader/Loader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Container,
   Center,
@@ -30,10 +30,11 @@ const Change = () => {
   const [videoTitle, setVideoTitle] = useState<string>("");
   const [videoThumb, setVideoThumb] = useState<string>("");
   const [quality, setQuality] = useState<string>("");
+  const [apikey, setApikey] = useState<string>("");
 
   const handleSubmit = async () => {
-    const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
-    if (!YOUTUBE_API_KEY) console.info("youtube api not found");
+    if (!apikey) console.info("youtube api not found");
+    console.log("handle submit called: ");
     const videoUrl = url.trim();
     if (!videoUrl || videoUrl === "")
       return toast.error("Please input video url");
@@ -42,10 +43,13 @@ const Change = () => {
     if (!videoIdMatch) return toast.error("Video id not found!");
     setVideoId(videoIdMatch[1]);
 
+    console.log({ videoUrl });
+    console.log({ videoId });
+
     setLoading(true);
     try {
       const { data } = await axios.get(
-        `${youTubeBaseUrl}/videos?id=${videoId}&key=${YOUTUBE_API_KEY}&part=snippet`
+        `${youTubeBaseUrl}/videos?id=${videoId}&key=${apikey}&part=snippet`
       );
       const sninnet = data?.items[0]?.snippet;
       if (sninnet) {
@@ -78,6 +82,17 @@ const Change = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    (async () => {
+      // const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
+      const YOUTUBE_API_KEY = import.meta.env.VITE_SOME_KEY;
+      if (YOUTUBE_API_KEY) {
+        setApikey(YOUTUBE_API_KEY);
+      }
+      setApikey("");
+    })();
+  }, []);
   return (
     <>
       <Container w="400px" h="auto" mx="auto" p={4}>
