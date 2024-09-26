@@ -85,8 +85,8 @@ const Change = () => {
 
   useEffect(() => {
     (async () => {
-      // const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
-      const YOUTUBE_API_KEY = import.meta.env.VITE_SOME_KEY;
+      const YOUTUBE_API_KEY = await getYoutTubeAPIKey();
+      // const YOUTUBE_API_KEY = import.meta.env.VITE_SOME_KEY;
       if (YOUTUBE_API_KEY) {
         setApikey(YOUTUBE_API_KEY);
       }
