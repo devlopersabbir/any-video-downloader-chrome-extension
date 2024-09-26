@@ -1,7 +1,6 @@
 import toast from "react-hot-toast";
 import { baseURL } from "./utils/axios";
 import axios from "axios";
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useState } from "react";
 import {
   Container,
@@ -16,7 +15,6 @@ import {
   Spinner,
   Text,
   Image,
-  IconButton,
 } from "@chakra-ui/react";
 
 const App = () => {
@@ -55,7 +53,7 @@ const App = () => {
           <br /> google chrome extension
         </Text>
         <VStack>
-          <HStack>
+          {/* <HStack>
             <IconButton
               size="xs"
               rounded="full"
@@ -80,7 +78,7 @@ const App = () => {
               as={BsYoutube}
               aria-label="facebook"
             />
-          </HStack>
+          </HStack> */}
           <InputGroup
             w="full"
             py={1}
@@ -125,9 +123,7 @@ const App = () => {
             cursor="pointer"
             color="green"
             textDecor="underline"
-            onClick={() =>
-              window.open("https://www.showwcase.com/devlopersabbir")
-            }
+            onClick={() => window.open("https://github.com/devlopersabbir")}
           >
             @devlopersabbir
           </Text>
