@@ -1,12 +1,12 @@
 {
   "name": "youtube_video_downloader_api",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "build/server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.ts",
+    "dev": "nodemon index.ts",
     "build": "tsc",
-    "start": "node build/server.js"
+    "start": "node build/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
