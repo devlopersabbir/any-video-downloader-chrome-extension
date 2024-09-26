@@ -20,10 +20,8 @@ import {
 } from "@chakra-ui/react";
 
 const App = () => {
-  // const YOUTUBE_API_KEY: string = "AIzaSyBA4OQ9i11REqdtOOMYiHkiA3UdQMB0AsE";
   const [url, setUrl] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-  const [platform, setPlatform] = useState<string>("");
 
   const handleSubmit = async () => {
     const videoUrl = url.trim();

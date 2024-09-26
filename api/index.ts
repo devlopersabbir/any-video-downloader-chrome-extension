@@ -1,18 +1,12 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import ytdl from "ytdl-core";
-import fs from "fs";
 import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: true,
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.get("/", async (req, res) => {
   res.status(200).json({
